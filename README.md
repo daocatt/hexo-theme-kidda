@@ -7,7 +7,7 @@
 1. Download from GitHub
 ```shell
 $ cd your-hexo-site
-$ git clone https://github.com/gary-Shen/hexo-theme-kidda themes/kidda
+$ git clone https://github.com/daocatt/hexo-theme-kidda themes/kidda
 ```
 2. Set the `theme` field in **your site** `_config.yml` to `kidda`
 ```yml
