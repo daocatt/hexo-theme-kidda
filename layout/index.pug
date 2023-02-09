@@ -1,0 +1,18 @@
+extends ../_partial/layout
+
+block content
+
+  .container.home
+    each post in site.posts.sort('date', -1).data
+      - var specialClass = post.special?'special':''
+      section(class=`article ${specialClass}`)
+        a(href=url_for(post.path)).title= post.title || 'any.com'
+        div.article-header
+          span.desc=post.desc
+        div.content.price(class=post.currency)!= post.price || '议价'
+        div.article-footer
+          span.date #{post.registration}
+          .article-footer__right
+            if post.tags
+              .tags!= list_tags(post.tags, { amount: 3, show_count: false, class: 'tag', style: false, separator: '' })
+        
