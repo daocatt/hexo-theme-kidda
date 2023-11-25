@@ -28,4 +28,4 @@ cd themes/kidda
 git pull
 ```
 
-## [Live Demo](http://www.kidda.xyz)
+## [Live Demo](http://www.nonghao.xyz)

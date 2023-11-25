@@ -7,9 +7,12 @@ block content
       - var specialClass = post.special?'special':''
       section(class=`article ${specialClass}`)
         a(href=url_for(post.path)).title= post.title || 'any.com'
+        if post.price
+          div.content.price(class=post.currency)= post.price
         div.article-header
           span.desc=post.desc
-        div.content.price(class=post.currency)!= post.price || '议价'
+        //- else
+        //-   div.content.offer-price(class=post.currency)= 'Make Offer'
         div.article-footer
           span.date #{post.registration}
           .article-footer__right

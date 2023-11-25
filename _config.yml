@@ -1,12 +1,11 @@
 # Header
 menu:
-  # Archives: /archives
-  # About: /about
+  # 归档: /archives
 rss: /atom.xml
-title: KIDDA.xyz
+title: nonghao.xyz
 
-author: kidda
-aboutme: KiDDA~
+author: nonghao
+aboutme: nonghao~
 
 # Content
 excerpt_link: 详情...
@@ -15,7 +14,7 @@ date_format: 'YYYY年MM月DD日'
 
 socials:
   # github: "https://github.com/none"
-  # email: "hello@kidda.xyz"
+  # email: "hello@nonghao.xyz"
   # wechat: "NOWECHAT"
 
 

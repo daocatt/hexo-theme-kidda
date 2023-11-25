@@ -6,7 +6,7 @@
   }
   .content {
     margin: 1rem 0
-    padding: 1rem 0
+    padding: 1rem 1*gutter-size
     border-top: 1px solid #eee
     color: #222222
     p{
@@ -23,12 +23,11 @@
 
 .article {
   background-color: color-article-background
-  padding 1.2 * gutter-size 1.2 * gutter-size 8px 
+  padding 0 0 1.2 * gutter-size
   position: relative
   margin-bottom gutter-size * 4
   
   @media mq-mobile {
-    padding 1.2 * gutter-size
     line-height 2rem
   }
 
@@ -160,10 +159,13 @@
   font-weight bold
   margin-bottom gutter-size
   line-height line-height
+  padding: 1*gutter-size
 
   .home &
     display block
     font-size: 1.2 * title-size
+    background: #f3e8ca
+    padding: 1*gutter-size
 
   .post &
     @media mq-mobile
@@ -264,30 +266,38 @@
   position absolute
   top 0
   right 1rem
-  font-size 2rem
+  font-size 1.2rem
   font-weight bold
   color #f85d03
   transition: all .6s ease
 
   &:before{
     content: "￥";
-    font-size: 1rem;
+    font-size: 0.6rem;
+    font-weight: normal;
+    color:#999;
   }
   &.USD:before{
     content: "$";
-    font-size: 1rem;
+    font-size: 0.6rem;
+    font-weight: normal;
+    color:#999;
   }
 
   &.EURO:before{
     content: "€";
-    font-size: 1rem;
+    font-size: 0.6rem;
+    font-weight: normal;
+    color:#999;
   }
 
   @media mq-mobile {
     position: initial
+    padding: 0 1.2 * gutter-size
   }
 
 .article-header
+  padding: 0 1.2 * gutter-size
   .desc
     color: #666
 
@@ -295,10 +305,21 @@
   margin-top: 1rem
   display flex
   justify-content space-between
+  padding: 0 1.2 * gutter-size
   @media mq-mobile {
     justify-content: flex-start;
     flex-direction: column;
   }
+
+.desc
+  .post &
+    margin-top: 1rem;
+    padding: 0 1*gutter-size
+
+.registration
+  .post &
+    padding: 5px 1*gutter-size
+    background: #eee;
 
 .date
   color color-grey
@@ -313,6 +334,8 @@
 .tags
   .home &
     margin-bottom 0
+  .post &
+    padding: 0 1*gutter-size
 
 .tag-link
   background-color color-tag
